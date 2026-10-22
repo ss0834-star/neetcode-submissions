@@ -1,0 +1,9 @@
+from collections import defaultdict
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        seen=defaultdict(int)
+        for i in range(len(nums)):
+            if nums[i]in seen:
+                return True
+            seen[nums[i]]+=1
+        return False          
